@@ -82,7 +82,7 @@ body {
 }
 
 /* Terminal Effect */
-#terminal-overlay {
+#terminal-bg {
     position: fixed;
     top: 0;
     left: 0;
