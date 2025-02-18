@@ -3,136 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Developer Portfolio - Hacker Style</title>
     <style>
-        /* Styles for Resume Website */
+        /* Base Styles */
+        :root {
+            --main-bg-color: #0a0a0a;
+            --accent-color: #00ff00;
+            --text-color: #e0e0e0;
+        }
         body {
-            background-color: #1e1e1e;
-            color: #ffffff;
-            font-family: 'Courier New', monospace;
-            text-align: center;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #151515;
-            padding: 15px;
-            border-bottom: 2px solid #00ff00;
-        }
-        .terminal-text {
-            font-size: 2.5rem;
-            text-shadow: 0 0 5px #00ff00;
-        }
-        nav ul {
-            list-style: none;
+            font-family: 'VT323', monospace;
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            margin: 0;
             padding: 0;
+            text-align: center;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav ul li a {
-            color: #00ff00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            margin: 50px auto;
-            padding: 30px;
-            max-width: 900px;
-            border-left: 3px solid #00ff00;
-            text-align: left;
-            padding-left: 25px;
-            background-color: #2a2a2a;
-            border-radius: 8px;
-        }
-        code {
-            background: #151515;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            color: #00ff00;
-        }
-        form input, form button {
-            display: block;
+        .container { max-width: 900px; margin: auto; padding: 40px; }
+        .highlight { color: var(--accent-color); }
+        .cta-btn { padding: 15px 30px; background: var(--accent-color); color: var(--main-bg-color); border: none; cursor: pointer; font-size: 1.2rem; }
+        .cta-btn:hover { background: #00cc00; }
+        .section { padding: 120px 0; font-size: 1.5rem; }
+        .nav-link { color: var(--text-color); margin: 0 20px; text-decoration: none; font-size: 1.2rem; }
+        .nav-link:hover { text-decoration: underline; }
+        .terminal-text { color: var(--accent-color); }
+        
+        /* Terminal Overlay Effect */
+        #terminal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 400px;
-            margin: 10px auto;
-            padding: 12px;
-            background-color: #151515;
-            color: #ffffff;
-            border: 2px solid #00ff00;
-            font-size: 1.1rem;
-            border-radius: 5px;
-        }
-        form button:hover {
-            background-color: #00ff00;
-            color: #0a0a0a;
-            cursor: pointer;
+            height: 100%;
+            background: linear-gradient(rgba(0, 255, 0, 0.02) 50%, transparent 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 9999;
         }
     </style>
 </head>
 <body>
+    <div id="terminal-overlay"></div>
     <header>
-        <h1 class="terminal-text">&gt; My Resume_</h1>
         <nav>
-            <ul id="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
-        <button id="menu-toggle">☰</button>
     </header>
     
-    <section id="about">
-        <h2 class="terminal-text">&gt; About Me_</h2>
-        <p>Hello! I'm a passionate web developer. I specialize in creating sleek, efficient websites with a love for problem-solving.</p>
+    <section id="home" class="section">
+        <div class="container">
+            <h1>&gt; Hello, I'm <span class="highlight">Your Name</span>_</h1>
+            <h2>Web Developer | Problem Solver</h2>
+            <button class="cta-btn" onclick="alert('Contact Me!')">Contact Me</button>
+        </div>
     </section>
     
-    <section id="skills">
-        <h2 class="terminal-text">&gt; Skills_</h2>
-        <p>Proficient in:</p>
-        <code>HTML</code> • <code>CSS</code> • <code>JavaScript</code> • <code>React</code> • <code>Node.js</code>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="terminal-text">&gt; About_Me</h2>
+            <p>Passionate developer creating elegant solutions.</p>
+        </div>
     </section>
     
-    <section id="experience">
-        <h2 class="terminal-text">&gt; Experience_</h2>
-        <p>Developed interactive web applications, optimized UI performance, and built modern, user-friendly designs.</p>
-    </section>
-    
-    <section id="contact">
-        <h2 class="terminal-text">&gt; Contact Me_</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            
-            <button type="submit">Submit</button>
-        </form>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="terminal-text">&gt; Contact_Me</h2>
+            <p>Email: email@example.com</p>
+        </div>
     </section>
     
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.getElementById("menu-toggle");
-            const navMenu = document.getElementById("nav-menu");
-            
-            menuToggle.addEventListener("click", function () {
-                navMenu.classList.toggle("active");
-            });
-        
-            document.getElementById("contact-form").addEventListener("submit", function (event) {
-                event.preventDefault();
-                const name = document.getElementById("name").value.trim();
-                const email = document.getElementById("email").value.trim();
-        
-                if (name === "" || email === "") {
-                    alert("Please fill in all fields.");
-                } else {
-                    alert("Form submitted successfully!");
-                }
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
             });
         });
     </script>
