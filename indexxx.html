@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        /* Styles for Resume Website */
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #151515;
+            padding: 15px;
+            border-bottom: 2px solid #00ff00;
+        }
+        .terminal-text {
+            font-size: 2.5rem;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 900px;
+            border-left: 3px solid #00ff00;
+            text-align: left;
+            padding-left: 25px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+        }
+        code {
+            background: #151515;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            color: #00ff00;
+        }
+        form input, form button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 12px;
+            background-color: #151515;
+            color: #ffffff;
+            border: 2px solid #00ff00;
+            font-size: 1.1rem;
+            border-radius: 5px;
+        }
+        form button:hover {
+            background-color: #00ff00;
+            color: #0a0a0a;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="terminal-text">&gt; My Resume_</h1>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle">☰</button>
+    </header>
+    
+    <section id="about">
+        <h2 class="terminal-text">&gt; About Me_</h2>
+        <p>Hello! I'm a passionate web developer. I specialize in creating sleek, efficient websites with a love for problem-solving.</p>
+    </section>
+    
+    <section id="skills">
+        <h2 class="terminal-text">&gt; Skills_</h2>
+        <p>Proficient in:</p>
+        <code>HTML</code> • <code>CSS</code> • <code>JavaScript</code> • <code>React</code> • <code>Node.js</code>
+    </section>
+    
+    <section id="experience">
+        <h2 class="terminal-text">&gt; Experience_</h2>
+        <p>Developed interactive web applications, optimized UI performance, and built modern, user-friendly designs.</p>
+    </section>
+    
+    <section id="contact">
+        <h2 class="terminal-text">&gt; Contact Me_</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navMenu = document.getElementById("nav-menu");
+            
+            menuToggle.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+        
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+        
+                if (name === "" || email === "") {
+                    alert("Please fill in all fields.");
+                } else {
+                    alert("Form submitted successfully!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
