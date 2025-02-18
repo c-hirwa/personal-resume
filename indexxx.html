@@ -28,35 +28,24 @@
         .nav-link { color: var(--text-color); margin: 0 20px; text-decoration: none; font-size: 1.2rem; }
         .nav-link:hover { text-decoration: underline; }
         .terminal-text { color: var(--accent-color); }
+        .timeline {
+            text-align: left;
+            max-width: 800px;
+            margin: auto;
+        }
+        .timeline-item {
+            border-left: 2px solid var(--accent-color);
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+        .timeline-item h3 { margin: 0; color: var(--accent-color); }
         
-        /* Terminal Overlay Effect */
-        #terminal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 255, 0, 0.02) 50%, transparent 50%);
-            background-size: 100% 4px;
-            pointer-events: none;
-            z-index: 9999;
-        }
-
-        /* Typewriter Effect */
-        .typewriter {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid var(--accent-color);
-            width: 0;
-            animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
-        }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        @keyframes blink {
-            50% { border-color: transparent; }
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #151515;
+            color: var(--text-color);
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -66,6 +55,8 @@
         <nav>
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
     </header>
@@ -85,12 +76,48 @@
         </div>
     </section>
     
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="terminal-text">&gt; Experience_</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Frontend Developer - Tech Corp</h3>
+                    <p>Developed responsive web applications using React.js and improved UX.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Intern - Startup Inc.</h3>
+                    <p>Assisted in developing a real-time chat application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="terminal-text">&gt; Projects_</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Portfolio Website</h3>
+                    <p>Designed a personal portfolio with a hacker-style theme.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Task Manager App</h3>
+                    <p>Developed a full-stack task manager with authentication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="contact" class="section">
         <div class="container">
             <h2 class="terminal-text">&gt; Contact_Me</h2>
             <p>Email: email@example.com</p>
         </div>
     </section>
+    
+    <footer>
+        <p>&copy; 2025 Your Name | Crafted with <span class="terminal-text">&lt;/code&gt;</span> in a terminal</p>
+    </footer>
     
     <script>
         document.querySelectorAll('.nav-link').forEach(link => {
