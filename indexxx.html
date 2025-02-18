@@ -18,27 +18,37 @@
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            text-align: center;
         }
-        .container { max-width: 900px; margin: auto; padding: 40px; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
         .highlight { color: var(--accent-color); }
         .cta-btn { padding: 15px 30px; background: var(--accent-color); color: var(--main-bg-color); border: none; cursor: pointer; font-size: 1.2rem; }
         .cta-btn:hover { background: #00cc00; }
-        .section { padding: 120px 0; font-size: 1.5rem; }
+        .section { padding: 80px 0; font-size: 1.2rem; border-bottom: 1px dashed var(--accent-color); }
         .nav-link { color: var(--text-color); margin: 0 20px; text-decoration: none; font-size: 1.2rem; }
         .nav-link:hover { text-decoration: underline; }
         .terminal-text { color: var(--accent-color); }
-        .timeline {
-            text-align: left;
-            max-width: 800px;
-            margin: auto;
-        }
-        .timeline-item {
-            border-left: 2px solid var(--accent-color);
-            padding: 10px 20px;
-            margin-bottom: 20px;
-        }
+        .timeline { text-align: left; max-width: 800px; margin: auto; }
+        .timeline-item { border-left: 2px solid var(--accent-color); padding: 10px 20px; margin-bottom: 20px; }
         .timeline-item h3 { margin: 0; color: var(--accent-color); }
+        
+        /* Header and Branding */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
         
         /* Footer */
         footer {
@@ -46,12 +56,13 @@
             background: #151515;
             color: var(--text-color);
             font-size: 1rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div id="terminal-overlay"></div>
     <header>
+        <div class="logo">&gt; Developer_</div>
         <nav>
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -63,8 +74,8 @@
     
     <section id="home" class="section">
         <div class="container">
-            <h1><span class="typewriter">&gt; Hello, I'm <span class="highlight">Your Name</span>_</span></h1>
-            <h2>Web Developer | Problem Solver</h2>
+            <h1><span class="typewriter">&gt; Hello, I'm <span class="highlight">Chris</span>_</span></h1>
+            <h2>Software Engineer | Web Developer | Problem Solver</h2>
             <button class="cta-btn" onclick="alert('Contact Me!')">Contact Me</button>
         </div>
     </section>
@@ -72,7 +83,7 @@
     <section id="about" class="section">
         <div class="container">
             <h2 class="terminal-text">&gt; About_Me</h2>
-            <p>Passionate developer creating elegant solutions.</p>
+            <p>I'm a passionate software engineer with experience in web development, graphic design, and customer service. I enjoy solving complex problems and building efficient solutions.</p>
         </div>
     </section>
     
@@ -81,12 +92,12 @@
             <h2 class="terminal-text">&gt; Experience_</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Frontend Developer - Tech Corp</h3>
-                    <p>Developed responsive web applications using React.js and improved UX.</p>
+                    <h3>Software Engineer Intern - Schenell Media</h3>
+                    <p>Developed and maintained client websites, improving performance and user experience.</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Intern - Startup Inc.</h3>
-                    <p>Assisted in developing a real-time chat application.</p>
+                    <h3>Customer Service Trainee</h3>
+                    <p>Completed a customer service training program, gaining experience in handling client interactions.</p>
                 </div>
             </div>
         </div>
@@ -97,12 +108,12 @@
             <h2 class="terminal-text">&gt; Projects_</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Portfolio Website</h3>
-                    <p>Designed a personal portfolio with a hacker-style theme.</p>
+                    <h3>Mood-Based Music Recommender</h3>
+                    <p>A Python program that suggests music based on user mood using AI.</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Task Manager App</h3>
-                    <p>Developed a full-stack task manager with authentication.</p>
+                    <h3>Farm-to-Table Platform</h3>
+                    <p>A web platform connecting farmers directly with consumers to promote sustainability.</p>
                 </div>
             </div>
         </div>
@@ -111,12 +122,14 @@
     <section id="contact" class="section">
         <div class="container">
             <h2 class="terminal-text">&gt; Contact_Me</h2>
-            <p>Email: email@example.com</p>
+            <p>Email: chris@example.com</p>
+            <p>GitHub: github.com/chris</p>
+            <p>LinkedIn: linkedin.com/in/chris</p>
         </div>
     </section>
     
     <footer>
-        <p>&copy; 2025 Your Name | Crafted with <span class="terminal-text">&lt;/code&gt;</span> in a terminal</p>
+        <p>&copy; 2025 Chris | Crafted with <span class="terminal-text">&lt;/code&gt;</span> in a terminal</p>
     </footer>
     
     <script>
