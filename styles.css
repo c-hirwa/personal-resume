@@ -47,6 +47,7 @@ body {
 
 /* Call to Action Button */
 .cta-btn {
+    font-family: 'VT323', monospace;
     padding: 15px 30px;
     background: var(--accent-color);
     color: var(--main-bg-color);
