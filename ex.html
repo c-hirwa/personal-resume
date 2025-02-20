@@ -1,84 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Hirwa - Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chris Hirwa - Software Engineer</title>
+        <link rel="stylesheet" href="ex.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+
 <body>
     <div id="terminal-bg"></div>
     
     <header>
-        <div class="logo">
-            <i class="fas fa-terminal"></i>
-            <span>Software_engineer_</span>
-        </div>
-        <nav>
-            <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
-            <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
-            <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
-            <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
-            <a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a>
-            <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-        </nav>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-terminal"></i>
+                <span>Software_engineer_</span>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
+                    <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+                    <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+                    <a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+                    <a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
-    
-    <section id="home" class="section">
-        <div class="container home-content">
-            <div class="profile-container">
-                <img src="/api/placeholder/300/300" alt="Chris Hirwa" class="profile-image">
-                <div class="social-links">
-                    <a href="https://github.com/c-hirwa" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/chris-hirwa" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="intro-text">
-                <h1><span class="typewriter">&gt; Hello, I'm <span class="highlight">Chris Hirwa_</span></span></h1>
-                <h2>Software Engineer | Problem Solver</h2>
-                <div class="tech-stack">
-                    <i class="fab fa-python" title="Python"></i>
-                    <i class="fas fa-database" title="SQL"></i>
-                    <i class="fab fa-git-alt" title="Git"></i>
-                    <i class="fab fa-linux" title="Shell Scripting"></i>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#projects" class="cta-btn"><i class="fas fa-code"></i> View my work</a>
-                    <a href="#contact" class="cta-btn secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title"><i class="fas fa-user"></i> About_Me_</h2>
             <div class="about-content">
-                <div class="skills-container">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-bars">
-                        <div class="skill">
-                            <span>Python</span>
-                            <div class="progress-bar" data-progress="85"></div>
-                        </div>
-                        <div class="skill">
-                            <span>SQL</span>
-                            <div class="progress-bar" data-progress="75"></div>
-                        </div>
-                        <div class="skill">
-                            <span>Git</span>
-                            <div class="progress-bar" data-progress="80"></div>
-                        </div>
-                        <div class="skill">
-                            <span>Shell Scripting</span>
-                            <div class="progress-bar" data-progress="70"></div>
-                        </div>
-                    </div>
-                </div>
                 <p class="about-text">Aspiring software engineer with a solid foundation in Python, SQL, Git, and Shell scripting. Passionate about building scalable solutions and contributing to innovative projects. Skilled in web development and database management, with a keen interest in learning modern tools and technologies to solve real-world problems.</p>
             </div>
         </div>
@@ -101,7 +60,9 @@
                                 <li><i class="fas fa-check"></i> Python Programming</li>
                                 <li><i class="fas fa-check"></i> Version Control with Git and GitHub</li>
                                 <li><i class="fas fa-check"></i> Database Management (SQL)</li>
-                                <li><i class="fas fa-check"></i> Shell Scripting</li>
+                                <li><i class="fas fa-check"></i> Advanced Html</li>
+                                <li><i class="fas fa-check"></i> Advanced Css</li>
+                                <li><i class="fas fa-check"></i> JavaScript</li>
                             </ul>
                         </div>
                     </div>
@@ -157,12 +118,10 @@
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Web Dev</span>
-                            <span class="tag">UI/UX</span>
                         </div>
                         <p>A web platform connecting farmers directly with consumers to promote sustainability.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/KABASINGAarsene/Negpod17_Farm-to-Table-_Platforms" class="project-link"><i class="fab fa-github"></i> View Code</a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +133,6 @@
                         <h3>Mood-Based Music Recommender</h3>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">AI/ML</span>
                         </div>
                         <p>A Python program that suggests music based on user mood using keyword matching.</p>
                         <div class="project-links">
@@ -185,6 +143,56 @@
             </div>
         </div>
     </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills_</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Shell</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop"></i> Web</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML/CSS/JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-wordpress"></i>
+                            <span>WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <section id="contact" class="section">
         <div class="container">
@@ -214,26 +222,21 @@
                     <div class="form-group">
                         <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="cta-btn">
+                    <button type="submit" class="cta-btn primary">
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
+                    <a href="My resume.pdf" download class="cta-btn primary">
+                        <i class="fas fa-download"></i> Download Cv
+                    </a>
                 </form>
             </div>
         </div>
     </section>
     
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Chris Hirwa | Crafted with <i class="fas fa-heart"></i> and <span class="terminal-text">&lt;/code&gt;</span></p>
-                <div class="social-links">
-                    <a href="https://github.com/c-hirwa" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/chris-hirwa" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
+        <p>&copy; 2025 Chris | Crafted with <span class="terminal-text">&lt;/code&gt;</span> in a terminal</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="ex.js"></script>
 </body>
 </html>
