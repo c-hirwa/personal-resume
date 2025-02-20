@@ -1,66 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Hirwa - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chris Hirwa - Software Engineer</title>
+        <link rel="stylesheet" href="ex.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+
 <body>
     <div id="terminal-bg"></div>
     
     <header>
-        <div class="logo">&gt; Software_engineer_</div>
-        <nav>
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-    </header>
-    
-    <section id="home" class="section">
-        <div class="container">
-            <h1><span class="typewriter">&gt; Hello, I'm <span class="highlight">Chris Hirwa_</span></span></h1>
-            <h2>Software Engineer | Problem Solver</h2>
-            <a href="#projects" class="cta-btn">View my work</a>
-            <a href="#contact" class="cta-btn">Contact Me</a>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-terminal"></i>
+                <span>Software_engineer_</span>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
+                    <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+                    <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+                    <a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+                    <a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </section>
-    
+    </header>
+
     <section id="about" class="section">
         <div class="container">
-            <h2 class="terminal-text">&gt; About_Me_</h2>
-            <p>Aspiring software engineer with a solid foundation in Python, SQL, Git, and Shell scripting. Passionate about building scalable solutions and contributing to innovative projects. Skilled in web development and database management, with a keen interest in learning modern tools and technologies to solve real-world problems.</p>
+            <h2 class="section-title"><i class="fas fa-user"></i> About_Me_</h2>
+            <div class="about-content">
+                <p class="about-text">Aspiring software engineer with a solid foundation in Python, SQL, Git, and Shell scripting. Passionate about building scalable solutions and contributing to innovative projects. Skilled in web development and database management, with a keen interest in learning modern tools and technologies to solve real-world problems.</p>
+            </div>
         </div>
     </section>
 
     <section id="education" class="section">
         <div class="container">
-            <h2 class="terminal-text">&gt; Education_</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education_</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>African Leadership University | BSc (Hons) in Software Engineering</h3>
-                    <p>Relevant Coursework: Python programming, Version Control with Git and GitHub, Database Management (SQL), Shell Scripting.</p>
+                    <div class="timeline-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>African Leadership University</h3>
+                        <h4>BSc (Hons) in Software Engineering</h4>
+                        <div class="courses">
+                            <h5>Key Coursework:</h5>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Python Programming</li>
+                                <li><i class="fas fa-check"></i> Version Control with Git and GitHub</li>
+                                <li><i class="fas fa-check"></i> Database Management (SQL)</li>
+                                <li><i class="fas fa-check"></i> Advanced Html</li>
+                                <li><i class="fas fa-check"></i> Advanced Css</li>
+                                <li><i class="fas fa-check"></i> JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="terminal-text">&gt; Experience_</h2>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience_</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Photoshop Operator - Schnell Media</h3>
-                    <p>Faced with the challenge of meeting tight deadlines for high-quality image retouching, I collaborated closely with a team to understand client requirements and design objectives. By applying advanced editing techniques to enhance image quality and ensure color consistency, I successfully delivered over 100 client projects on time, contributing to a 15% increase in repeat business.</p>
+                    <div class="timeline-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Photoshop Operator - Schnell Media</h3>
+                        <div class="achievements">
+                            <p><i class="fas fa-star"></i> Delivered 100+ client projects on time</p>
+                            <p><i class="fas fa-chart-line"></i> Contributed to 15% increase in repeat business</p>
+                            <p><i class="fas fa-users"></i> Collaborated with cross-functional teams</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <h3>Software Developer Intern - Klab Rw</h3>
-                    <p>Tasked with building responsive websites for small and medium-sized businesses, I designed and implemented user-friendly interfaces using WordPress to align with client branding. After deployment, I provided training to clients for basic website management. Successfully delivering 5+ fully functional websites, I contributed to a 30% increase in engagement and online presence.</p>
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Software Developer Intern - Klab Rw</h3>
+                        <div class="achievements">
+                            <p><i class="fas fa-check-circle"></i> Developed 5+ fully functional websites</p>
+                            <p><i class="fas fa-chart-bar"></i> Achieved 30% increase in client engagement</p>
+                            <p><i class="fas fa-chalkboard-teacher"></i> Provided client training</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,31 +107,136 @@
     
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="terminal-text">&gt; Projects_</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Farm-to-Table Platform</h3>
-                    <p>A group final project for the second term, where we developed a web platform connecting farmers directly with consumers to promote sustainability. The platform allowed farmers to list their products, and consumers could browse and purchase fresh, locally sourced produce. My contributions included designing user-friendly interfaces and ensuring smooth functionality to enhance the buying experience. This project strengthened my teamwork, web development, and problem-solving skills.</p>
+            <h2 class="section-title"><i class="fas fa-code"></i> Projects_</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/Farmtotable platform (1).jpg" alt="Farm-to-Table Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Farm-to-Table Platform</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Web Dev</span>
+                        </div>
+                        <p>A web platform connecting farmers directly with consumers to promote sustainability.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/KABASINGAarsene/Negpod17_Farm-to-Table-_Platforms" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h3>Mood-Based Music Recommender</h3>
-                    <p>An individual school project where I built a simple Python program that suggests music based on user mood. The program takes user input, determines the mood using basic keyword matching, and recommends songs accordingly. This project helped me practice Python programming and improve my understanding of user interaction and basic automation.</p>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/Moodbased music reco (1).jpg" alt="Mood-Based Music Recommender">
+                    </div>
+                    <div class="project-content">
+                        <h3>Mood-Based Music Recommender</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                        </div>
+                        <p>A Python program that suggests music based on user mood using keyword matching.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Skills_</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Shell</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop"></i> Web</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML/CSS/JS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-wordpress"></i>
+                            <span>WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="terminal-text">&gt; Contact_Me</h2>
-            <p>Email: c.hirwa@alustudent.com</p>
-            <p>GitHub: github.com/c-hirwa</p>
-            <p>LinkedIn: linkedin.com/in/chris-hirwa</p>
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Contact_Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:c.hirwa@alustudent.com">c.hirwa@alustudent.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/c-hirwa" target="_blank">github.com/c-hirwa</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/chris-hirwa" target="_blank">linkedin.com/in/chris-hirwa</a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <a href="Chris Hirwa Resume.pdf" download class="cta-btn primary">
+                        <i class="fas fa-eye"></i> View Resume
+                    </a>
+                </form>
+            </div>
         </div>
     </section>
     
     <footer>
-        <p>&copy; 2025 Chris | Crafted with <span class="terminal-text">&lt;/code&gt;</span> in a terminal</p>
+        <p>&copy; 2025 Chris | Crafted with <span class="green">&lt;/code&gt;</span> in a terminal</p>
     </footer>
+
+    <script src="ex.js"></script>
 </body>
 </html>
