@@ -371,6 +371,22 @@ header {
     margin-bottom: 8px;
 }
 
+#terminal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 255, 0, 0.02) 50%, transparent 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.green{
+    color: var(--accent-color);
+}
+
 /* Projects Grid */
 .projects-grid {
     display: grid;
